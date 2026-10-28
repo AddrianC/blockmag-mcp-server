@@ -83,7 +83,10 @@ async function forwardRpcMessage(line) {
     }
 }
 
-rl.on('line', (line) => {
-    forwardRpcMessage(line);
-});
+(async () => {
+    for await (const line of rl) {
+        await forwardRpcMessage(line);
+    }
+})();
+
 
