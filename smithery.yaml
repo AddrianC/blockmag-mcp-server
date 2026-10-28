@@ -1,0 +1,18 @@
+# Smithery.ai MCP Server Configuration for BlockMag
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    properties:
+      blockmagMcpToken:
+        type: string
+        description: Optional Sanctum MCP Token for authenticated Tenant Hands-Free ERP tools. Leave empty to use the 6 free public tools on https://blockmag.com/api/mcp/public.
+  commandFunction: |-
+    (config) => ({
+      command: 'node',
+      args: ['index.mjs'],
+      env: config && config.blockmagMcpToken
+        ? { BLOCKMAG_MCP_URL: 'https://blockmag.com/api/mcp/tenant', BLOCKMAG_MCP_TOKEN: config.blockmagMcpToken }
+        : { BLOCKMAG_MCP_URL: 'https://blockmag.com/api/mcp/public' }
+    })
+

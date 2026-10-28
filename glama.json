@@ -1,0 +1,20 @@
+{
+  "$schema": "https://glama.ai/mcp/schemas/server.json",
+  "maintainers": [
+    "AddrianC"
+  ],
+  "name": "BlockMag Public MCP Server",
+  "description": "Free Model Context Protocol (MCP) Server for BlockMag.com providing 6 zero-auth tools: global E-Shop store search, EAN-13 product catalog discovery, storefront details, free A4 VAT invoice generator, freelancer timesheet & overtime calculator, and cryptographic QR verification.",
+  "homepage": "https://blockmag.com",
+  "remoteEndpoints": [
+    {
+      "type": "sse",
+      "url": "https://blockmag.com/api/mcp/public"
+    },
+    {
+      "type": "streamable-http",
+      "url": "https://blockmag.com/api/mcp/public"
+    }
+  ]
+}
+

@@ -1,0 +1,42 @@
+{
+  "name": "blockmag-mcp-server",
+  "version": "1.0.0",
+  "description": "Official Model Context Protocol (MCP) Server for BlockMag.com — 6 free public AI tools for global store discovery, EAN-13 product catalog search, A4 VAT invoice generation, freelancer timesheet/overtime calculation, and cryptographic QR receipt verification.",
+  "type": "module",
+  "main": "index.mjs",
+  "bin": {
+    "blockmag-mcp-server": "./index.mjs"
+  },
+  "scripts": {
+    "start": "node index.mjs"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "blockmag",
+    "invoicing",
+    "invoice-generator",
+    "timesheet-calculator",
+    "ecommerce",
+    "eshop",
+    "pos",
+    "erp",
+    "ai-agents",
+    "claude",
+    "cursor"
+  ],
+  "homepage": "https://blockmag.com/tech-radar",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AddrianC/blockmag-mcp-server.git"
+  },
+  "bugs": {
+    "url": "https://blockmag.com/sellers"
+  },
+  "author": "BlockMag LTD (https://blockmag.com)",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
+
