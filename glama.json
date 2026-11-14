@@ -3,18 +3,17 @@
   "maintainers": [
     "AddrianC"
   ],
-  "name": "BlockMag Public MCP Server",
-  "description": "Free Model Context Protocol (MCP) Server for BlockMag.com providing 6 zero-auth tools: global E-Shop store search, EAN-13 product catalog discovery, storefront details, free A4 VAT invoice generator, freelancer timesheet & overtime calculator, and cryptographic QR verification.",
-  "homepage": "https://blockmag.com",
+  "name": "BlockMag Official Dual-Tier MCP Server",
+  "description": "Official Model Context Protocol (MCP 2024-11-05) Server v2.0.0 for BlockMag.com — 31 total tools across 2 tiers: 6 free zero-auth public tools (global E-Shop discovery, EAN-13 catalog search, storefront details, A4 VAT invoice generator, freelancer timesheet & overtime calculator, cryptographic QR verification) + 25 authenticated Tenant Hands-Free Voice ERP tools (invoicing, P&L, autonomous VAT expense reconciliation, mileage/subsistence A4 statements, multi-warehouse stock, BOM manufacturing recipes, staff attendance, and E-Shop orders).",
+  "homepage": "https://blockmag.com/tech-radar",
   "remoteEndpoints": [
     {
-      "type": "sse",
+      "type": "streamable-http",
       "url": "https://blockmag.com/api/mcp/public"
     },
     {
-      "type": "streamable-http",
+      "type": "sse",
       "url": "https://blockmag.com/api/mcp/public"
     }
   ]
 }
-

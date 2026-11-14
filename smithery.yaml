@@ -1,4 +1,4 @@
-# Smithery.ai MCP Server Configuration for BlockMag
+# Smithery.ai Dual-Tier MCP Server Configuration for BlockMag (v2.0.0)
 startCommand:
   type: stdio
   configSchema:
@@ -6,7 +6,7 @@ startCommand:
     properties:
       blockmagMcpToken:
         type: string
-        description: Optional Sanctum MCP Token for authenticated Tenant Hands-Free ERP tools. Leave empty to use the 6 free public tools on https://blockmag.com/api/mcp/public.
+        description: Optional Sanctum MCP Token generated in BlockMag (Billing -> AI & MCP Integration) to unlock up to 25 authenticated Tenant Hands-Free Voice ERP tools on https://blockmag.com/api/mcp/tenant. Leave empty to use the 6 free public tools on https://blockmag.com/api/mcp/public with zero authentication.
   commandFunction: |-
     (config) => ({
       command: 'node',
@@ -15,4 +15,3 @@ startCommand:
         ? { BLOCKMAG_MCP_URL: 'https://blockmag.com/api/mcp/tenant', BLOCKMAG_MCP_TOKEN: config.blockmagMcpToken }
         : { BLOCKMAG_MCP_URL: 'https://blockmag.com/api/mcp/public' }
     })
-
